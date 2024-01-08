@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block new_user %}
+<body>
+    <div class="container">
+        <div class="card bg-dark">
+            <div class="card-body">
+                <h5 class="card-title"><b>{{user.username}}</b> {{message}}</h5>
+                <p class="card-text"><strong>Email:</strong> {{user.email}}</p>
+                <p class="card-text"><strong>Dirección:</strong> {{user.address}}</p>
+                <p class="card-text"><strong>Teléfono:</strong> {{user.phone}}</p>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
