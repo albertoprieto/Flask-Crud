@@ -57,7 +57,7 @@ def add(username='', email='', address='', phone=''):
 
 def delete():
     url = 'http://localhost:5000/delete'
-    user_id_to_delete = 1  # ID del usuario que deseas eliminar
+    user_id_to_delete = 1
 
     response = requests.post(url, data={'id': user_id_to_delete})
     if response.status_code == 200:
@@ -65,12 +65,3 @@ def delete():
     else:
         print(f"Error: {response.status_code}, {response.json()}")
 
-#x = input('Operación: ')
-
-#if x in globals() and callable(globals()[x]):
-#    globals()[x]()
-#else:
-#    print("La función no existe.")
-
-add()
-delete()
